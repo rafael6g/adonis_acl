@@ -26,3 +26,12 @@ Run the following command to run startup migrations.
 ```js
 adonis migration:run
 ```
+### Executar Servidor
+Executar servidor
+
+```js
+adonis serve --dev
+adonis kue:listen
+docker start 759384b8b66b 05bef3531161
+```
+
