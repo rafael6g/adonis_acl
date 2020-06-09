@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import AuthActions from '~/store/ducks/auth';
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import AuthActions from "~/store/ducks/auth";
 
-import Button from '~/styles/components/Button';
-import { Container, SignForm } from '../styles';
+import Button from "~/styles/components/Button";
+import { Container, SignForm } from "../styles";
 
 class SigIn extends Component {
   static propTypes = {
@@ -14,8 +14,8 @@ class SigIn extends Component {
   };
 
   state = {
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   };
 
   handleSubmit = (e) => {
@@ -36,7 +36,7 @@ class SigIn extends Component {
 
     return (
       <Container>
-        <SignForm onSubmit={this.handleSubmit}>
+        <SignForm onClick={this.handleSubmit}>
           <h1>Boas vindas</h1>
 
           <span>E_MAIL</span>
@@ -44,7 +44,7 @@ class SigIn extends Component {
             type="email"
             name="email"
             value={email}
-            // autoComplete="on"
+            autoComplete="on"
             onChange={this.handleInputChange}
           />
 
@@ -53,7 +53,7 @@ class SigIn extends Component {
             type="password"
             name="password"
             value={password}
-            // autoComplete="off"
+            autoComplete="on"
             onChange={this.handleInputChange}
           />
 
@@ -66,9 +66,7 @@ class SigIn extends Component {
   }
 }
 
-const mapDispatchToProps = (dispatch) => bindActionCreators(AuthActions, dispatch);
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators(AuthActions, dispatch);
 
-export default connect(
-  null,
-  mapDispatchToProps,
-)(SigIn);
+export default connect(null, mapDispatchToProps)(SigIn);

@@ -6,7 +6,6 @@ import { HelmetProvider } from 'react-helmet-async';
 import store from './store';
 import Routes from './routes';
 
-// import GlobalStyle from './styles/global';
 import GlobalStyle from './styles/global';
 
 const App = () => (
