@@ -1,27 +1,26 @@
 {
   "parser": "babel-eslint",
-  "extends": [
-    "airbnb"
-  ],
+  "extends": ["airbnb","plugin:prettier/recommended"],
   "env": {
     "browser": true,
     "jest": true
   },
-  "plugins": ["react", "jsx-a11y", "import"],
-  
+  "plugins": ["react", "jsx-a11y", "import","prettier"],
   "rules": {
+    "prettier/prettier": "error",
     "react/jsx-filename-extension": [
       "error",
-      {"extensions": [".js", ".jsx"]}
+      {
+        "extensions": [".js", ".jsx"]
+      }
     ],
-    "import/prefer-default-export": "off",
-    "react/static-property-placement": ["<enabled>"]  // `static public field` enabled
+    "import/prefer-default-export": "off"
   },
   "settings": {
     "import/resolver": {
-      "babel-plugin-root-import": { 
+      "babel-plugin-root-import": {
         "rootPathPrefix": "~",
-        "rootPathSuffix": "src" 
+        "rootPathSuffix": "src"
       }
     }
   }
